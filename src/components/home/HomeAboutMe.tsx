@@ -23,7 +23,7 @@ const HomeAboutMe = () => {
         <div className='flex flex-col text-justify '>
           {/* <h1 className='text-[50px]  text-dark-blue'>About me</h1> */}
           <div className='w-full text-right'>
-            <h1 className="text-[75px] text-dark-blue  max-ssw:text-[45px]" >About me</h1>
+            <h1 className="text-[75px] text-dark-blue  max-ssw:text-[45px]" >About me test</h1>
           </div>
           <p className='text-[25px] max-ssw:text-[18px]'>
             As a dedicated and ambitious
