@@ -21,9 +21,8 @@ const HomeAboutMe = () => {
           <div className={`absolute shadow-lg shadow-gray-600 bg-dark-blue right-0 bottom-0 max-ssw:w-[250px] max-ssw:h-[250px] w-[300px] h-[300px] transition-opacity ease-in duration-1000 ${isVisible ? "opacity-100 " : "opacity-0"}`}></div>
         </div>
         <div className='flex flex-col text-justify '>
-          {/* <h1 className='text-[50px]  text-dark-blue'>About me</h1> */}
           <div className='w-full text-right'>
-            <h1 className="text-[75px] text-dark-blue  max-ssw:text-[45px]" >About me test</h1>
+            <h1 className="text-[75px] text-dark-blue  max-ssw:text-[45px]" >About me</h1>
           </div>
           <p className='text-[25px] max-ssw:text-[18px]'>
             As a dedicated and ambitious

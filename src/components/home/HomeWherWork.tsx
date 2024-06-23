@@ -1,19 +1,13 @@
 
 'use client'
 
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import React, { useRef } from 'react'
 import ProjectCard from '../ProjectCard'
-import { useIsVisible } from '@/hooks/VIsibility'
 
 const HomeWherWork = () => {
 
-    const ref1 = useRef(null);
-    const isVisible1 = useIsVisible(ref1);
-    const ref2 = useRef(null);
-    const isVisible2 = useIsVisible(ref2);
-    const ref3 = useRef(null);
-    const isVisible3 = useIsVisible(ref3);
+    const date = new Date();
+    const year = date.getFullYear();
 
     const projectsBB = [
         {
@@ -63,11 +57,11 @@ const HomeWherWork = () => {
                         <div className='max-h-[3000px] min-w-1 bg-dark-green relative'>
                             <div className='w-8 h-8 max-ssw:w-4 max-ssw:h-4 rounded-full bg-dark-green absolute left-1/2 transform -translate-x-1/2 '>
                             </div>
-                            <h1 className='absolute -left-[39px] top-[60px] -rotate-90 text-dark-green font-bold text-[25px]'>2024</h1>
+                            <h1 className='absolute -left-[39px] top-[60px] -rotate-90 text-dark-green font-bold text-[25px]'>{year}</h1>
                             <div className='absolute w-[4px] h-5 top-[115px] -left-[9px] bg-dark-green'></div>
                             <h1 className='absolute -left-[39px] top-[150px] -rotate-90 text-dark-green font-bold text-[25px]'>2023</h1>
                         </div>
-                        <div ref={ref1} className={`bg-dark-green rounded-3xl shadow-lg w-full p-8  max-ssw:p-4 ${isVisible1 ? "animate-pop-left-right" : ""}`}>
+                        <div className={`bg-dark-green rounded-3xl shadow-lg w-full p-8  max-ssw:p-4 `}>
                             <h1 className='text-[55px] text-grey leading-none max-ssw:text-[45px] max-ssw:text-center'>Blackbird</h1>
                             <p className='text-grey my-4 text-[25px] max-ssw:text-[18px] max-ssw:text-center'>Working on personalization of client needs in Oracle Netsuite using
                                 SuiteScript and developing dynamic front-end applications with Next.js.</p>
@@ -78,10 +72,8 @@ const HomeWherWork = () => {
                                         <ProjectCard key={index} item={i} />
                                     )
                                 }
-
                             </div>
                         </div>
-
                     </div>
                     <div className={`flex flex-row max-h-[1900px]  gap-8 max-ssw:gap-4`}>
                         <div className='max-h-[1900px] min-w-1 bg-dark-green relative'>
@@ -89,7 +81,7 @@ const HomeWherWork = () => {
                             </div>
                             <h1 className='absolute -left-[39px] top-[92px] -rotate-90 text-dark-green font-bold text-[25px]'>2022</h1>
                         </div>
-                        <div ref={ref2} className={`bg-dark-green shadow-xl shadow-gray-600 rounded-3xl w-full p-8  max-ssw:p-4 mt-8 ${isVisible2 ? "animate-pop-left-right" : ""}`}>
+                        <div className={`bg-dark-green shadow-xl shadow-gray-600 rounded-3xl w-full p-8  max-ssw:p-4 mt-8 `}>
                             <h1 className='text-[55px] text-grey leading-none max-ssw:text-[45px] max-ssw:text-center'>Synsoft LTD.</h1>
                             <p className='text-grey text-[25px] max-ssw:text-[18px] max-ssw:text-center my-4'>Working on app Dispatcher log used for managing workflow of Serbian
                                 electrical network. App was developed in Angular JS on front-end and Spring
@@ -101,10 +93,8 @@ const HomeWherWork = () => {
                                         <ProjectCard key={index} item={i} />
                                     )
                                 }
-
                             </div>
                         </div>
-
                     </div>
                     <div className={`flex flex-row max-h-[1900px]  gap-8 max-ssw:gap-4`}>
                         <div className='max-h-[1900px] min-w-1 bg-dark-green relative'>
@@ -112,7 +102,7 @@ const HomeWherWork = () => {
                             </div>
                             <h1 className='absolute -left-[39px] top-[92px] -rotate-90 text-dark-green font-bold text-[25px]'>2020</h1>
                         </div>
-                        <div ref={ref3} className={`bg-dark-green shadow-xl shadow-gray-600 rounded-3xl w-full p-8  max-ssw:p-4 mt-8 ${isVisible3 ? "animate-pop-left-right" : ""}`}>
+                        <div className={`bg-dark-green shadow-xl shadow-gray-600 rounded-3xl w-full p-8  max-ssw:p-4 mt-8`}>
                         <h1 className='text-[55px] text-grey leading-none max-ssw:text-[45px] max-ssw:text-center'>Microsoft</h1>
                         <p className='text-grey text-[25px] max-ssw:text-[18px] max-ssw:text-center my-4'>Working on map labeling in JOSM. I was teaching AI to recognize objects on
                                 map based on imagery of Japanese cities.</p>
@@ -123,13 +113,11 @@ const HomeWherWork = () => {
                                         <ProjectCard key={index} item={i} />
                                     )
                                 }
-
                             </div>
                         </div>
 
                     </div>
                 </div>
-
             </div>
         </>
     )

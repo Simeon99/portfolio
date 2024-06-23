@@ -32,7 +32,6 @@ export default function RootLayout({ children }: {
         <NavbarProvider>
             <Navbar items={items} />
             <div className="fixed w-1/2 right-0 h-full -z-50 bg-dark-blue">
-
             </div>
             {children}
             <Footer />

@@ -1,20 +1,9 @@
 'use cleint'
-
-import { useIsVisible } from '@/hooks/VIsibility'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useRef } from 'react'
 
 const HomeTools = () => {
-
-  const ref1 = useRef(null);
-    const isVisible1 = useIsVisible(ref1);
-    const ref2 = useRef(null);
-    const isVisible2 = useIsVisible(ref2);
-    const ref3 = useRef(null);
-    const isVisible3 = useIsVisible(ref3);
-    const ref4 = useRef(null);
-    const isVisible4 = useIsVisible(ref4);
 
   return (
     <div className='py-[153px] '>
@@ -22,7 +11,7 @@ const HomeTools = () => {
       <div className='grid grid-cols-2 max-lg:grid-cols-1 gap-4 pt-8'>
         <div  className={`w-full flex flex-col  bg-green rounded-3xl p-8 shadow-xl shadow-gray-600  `}>
           <h1 className=' text-[35px]  max-ssw:text-[25px] font-bold max-ssw:text-center text-dark-green'>Programming Languages</h1>
-          <div ref={ref1} className={`grid grid-cols-6 max-ssw:grid-cols-4 w-full h-full  gap-4 place-items-center pt-4 ${isVisible1 ? "animate-pop-left-right" : ""}`}>
+          <div  className={`grid grid-cols-6 max-ssw:grid-cols-4 w-full h-full  gap-4 place-items-center pt-4`}>
             <div className='col-span-2  hover:translate-y-[-10px] transition duration-300 ease-out'>
               <Link href={'https://www.java.com/'} target='_blank'>
                 <Image src={'/java-logo.png'} alt='' width={80} height={80} className='max-sm:hidden flex' />
@@ -54,12 +43,10 @@ const HomeTools = () => {
               </Link>
             </div>
           </div>
-
-
         </div>
         <div className='w-full h-full bg-dark-blue rounded-3xl p-8 shadow-xl shadow-gray-600'>
           <h1 className=' text-[35px]  max-ssw:text-[25px] font-bold max-ssw:text-center text-green'>Frontend</h1>
-          <div ref={ref2} className={`grid grid-cols-3 max-ssw:grid-cols-4 gap-4 place-items-center ${isVisible2 ? "animate-pop-right-left" : ""}`}>
+          <div className={`grid grid-cols-3 max-ssw:grid-cols-4 gap-4 place-items-center`}>
             <div className='max-ssw:col-span-2 hover:translate-y-[-10px] transition duration-300 ease-out'>
               <Link href={'https://react.dev/'} target='_blank'>
                 <Image src={'/react.png'} alt='' width={80} height={80} className='max-sm:hidden flex'/>
@@ -73,7 +60,6 @@ const HomeTools = () => {
                   <Image src={'/nextjs-13.svg'} alt='' width={80} height={80} className='hidden max-sm:flex'/>
                 </div>
               </Link>
-
             </div>
             <div className=' max-ssw:col-span-2 hover:translate-y-[-10px] transition duration-300 ease-out'>
               <Link href={'https://angular.dev/'} target='_blank'>
@@ -124,11 +110,10 @@ const HomeTools = () => {
             </Link>
             </div>
           </div>
-
         </div>
         <div className='w-full flex flex-col  bg-dark-blue max-lg:bg-green rounded-3xl p-8 shadow-xl shadow-gray-600'>
           <h1 className=' text-[35px]  max-ssw:text-[25px] font-bold max-ssw:text-center text-green max-lg:text-dark-green'>Backend Development</h1>
-          <div ref={ref3} className={`grid grid-cols-3 max-ssw:grid-cols-2 gap-4 place-items-center h-full ${isVisible3 ? "animate-pop-left-right" : ""}`}>
+          <div className={`grid grid-cols-3 max-ssw:grid-cols-2 gap-4 place-items-center h-full`}>
             <div className='hover:translate-y-[-10px] transition duration-300 ease-out'>
               <Link href={'https://spring.io/'} target='_blank'>
                 <Image src={'/spring.png'} alt='' width={100} height={80} className='max-sm:hidden flex'/>
@@ -169,7 +154,7 @@ const HomeTools = () => {
         </div>
         <div className='w-full flex flex-col bg-green max-lg:bg-dark-blue rounded-3xl p-8 shadow-xl shadow-gray-600'>
           <h1 className=' text-[35px]  max-ssw:text-[25px] font-bold max-ssw:text-center text-dark-green max-lg:text-green'>Other</h1>
-          <div ref={ref4} className={`grid grid-cols-3 max-ssw:grid-cols-2 gap-4 place-items-center h-full ${isVisible4 ? "animate-pop-right-left" : ""}`}>
+          <div className={`grid grid-cols-3 max-ssw:grid-cols-2 gap-4 place-items-center h-full`}>
             <div className='hover:translate-y-[-10px] transition duration-300 ease-out'>
               <Link href={'https://git-scm.com/'} target='_blank'>
                 <Image src={'/git.png'} alt='' width={80} height={80} className='max-sm:hidden flex'/>
@@ -209,7 +194,6 @@ const HomeTools = () => {
           </div>
         </div>
       </div>
-
     </div>
   )
 }

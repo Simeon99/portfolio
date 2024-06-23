@@ -10,6 +10,7 @@ export function useIsVisible(ref: any) {
 
     const observer = new IntersectionObserver(([entry]) => {
       setIntersecting(entry.isIntersecting);
+      
     });
 
     observer.observe(ref.current);

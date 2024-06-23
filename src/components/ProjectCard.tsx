@@ -5,7 +5,6 @@ import Link from 'next/link';
 
 import { BsArrowRightCircleFill } from "react-icons/bs";
 
-
 interface IProjectCard {
     title: string;
     text: string;
@@ -14,12 +13,7 @@ interface IProjectCard {
 
 const ProjectCard = ({ item }: { item: IProjectCard }) => {
     const [isHovered, setIsHovered] = useState(false);
-    function open() {
-
-    }
     return (
-
-
         item.link  ?
             <Link href={item.link} target='_blank' className=' bg-grey rounded-3xl p-8 max-ssw:p-4 flex flex-col justify-between cursor-pointer'
                 onMouseEnter={() => setIsHovered(true)}
